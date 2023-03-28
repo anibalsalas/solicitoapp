@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+
+:root {
+  --negro: #181E32;
+  --blanco: #fff;
+  --color1: #004a81;
+  --color2: #b580b6;
+  --Azul:  rgba(0,74,129,1);
+    --lila: rgba(153,86,158,1);
+    --rosado: rgba(239,127,126,1);
+  /* Tipografía */
+  --tipo-principal: 'Inter', sans-serif;
+  --tipo-secundaria: Verdana;
+}
+
+/*RESET*/
+body {
+  min-height: 100vh;
+  height: 100%;
+  font-family: var(--tipo-principal);
+  color: var(--negro);
+  line-height: 1.4em;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Evito  problemas con las imagenes */
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+/* anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  /* overflow: hidden */
+}
+
+/* Nivelo problemas de tipografía y colocación del formulario */
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+i,
+b,
+u,
+em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/*FIN*/
+
+/*CONTENIDO*/
+.fondoprincipal {
+  background: url(../img/fondo-edt.jpg) #FFFFFF !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+  margin: 50px;
+}
+
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.logo img {
+  text-align: center;
+  width: 215px;
+}
+
+.bienvenida {
+  margin-bottom: 30px;
+  text-align: center;
+  line-height: 2em;
+}
+
+.bienvenida .titulo .inscripcion{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.bienvenida h2 {
+  font-family: var(--tipo-principal);
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.titulo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+    margin-bottom: 40px;
+
+}
+
+.titulo h1 {
+  font-family: var(--tipo-principal);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.detalleCuadrado {
+  max-width: 90%;
+  width: 90%;
+  padding: 40px 15px 40px 15px;
+}
+
+.fondoblanco {
+  background: var(--blanco);
+  padding: 40px 15px 40px 15px;
+  border-radius: 40px;
+  padding-bottom: 6rem;
+
+}
+
+.direccion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 71px;
+  margin-top: 43px;
+}
+
+.imgLogo {
+  margin-right: 30px;
+}
+
+.imgLogo img {
+  width: 128px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.detalleDireccion {
+  text-align: left;
+  font-size: 14px;
+}
+
+.detalleDireccion p {
+  margin: 0 0 8px;
+  color: var(--negro);
+  line-height: 1em;
+  display: flex;
+}
+
+p span {
+  color: var(--color2);
+  text-transform: uppercase;
+}
+
+.inscripcion {
+  display: grid;
+  grid-template-rows: repeat(2, 2fr) ;
+  line-height: 2em;
+  grid-gap: 3px;
+  justify-items: center;
+  align-items: center;
+}
+
+.inscripcion h2 {
+  font-size: 1.2rem;
+  font-family: var(--tipo-principal);
+  font-weight: 800;
+  color: var(--color1);
+  text-align: center;
+}
+
+.inscripcion a{
+  border: 0;
+  background-image: linear-gradient( 150deg, rgba(0,74,129,1), rgba(153,86,158,1) , rgba(239,127,126,1) );
+  border-radius: 8px;
+  color: #fff;
+  display: flex;
+  font-size: 18px;
+  padding: 4px 3px 4px 5px;
+  cursor: pointer;
+  transition: 1s;
+  text-align: center !important;
+  width: 133px;
+  text-decoration: none !important;
+}
+.inscripcion a span{
+  background-color: var(--negro);
+  padding: 7px 27px;
+  border-radius: 6px;
+  transition:0.5s;
+}
+
+.inscripcion a:hover span{
+  background: none;
+}
+.inscripcion a:active{
+  transform: scale(0.9);
+}
+
+/*boton modal*/
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #ef7f7e !important;
+  --bs-btn-border-color: #ef7f7e !important;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #99569e !important;
+  --bs-btn-hover-border-color: #99569e !important;
+  --bs-btn-focus-shadow-rgb: 49,132,253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #004a81 !important;
+  --bs-btn-active-border-color: #004a81 !important;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #004a81 !important;
+  --bs-btn-disabled-border-color: #004a81 !important;
+}
+
+/*MODAL*/
+.modal-header {
+ 
+  background: linear-gradient(523deg, rgb(0, 74, 129) 25%, rgb(153, 86, 158) 51%, rgb(239, 127, 126) 100%) !important;
+  color: var(--blanco) !important;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+/**FORMULARIO MATRICULA**/
+
+.direction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 43px;
+}
+
+
+p {
+  color: grey
+}
+
+#heading {
+  text-transform: uppercase;
+  color: var(--lila);
+  font-weight: normal
+}
+
+#msform {
+  text-align: center;
+  position: relative;
+  margin-top: 20px
+}
+
+#msform fieldset {
+  background: white;
+  border: 0 none;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 20px;
+  position: relative
+}
+
+.form-card {
+  text-align: left
+}
+
+#msform fieldset:not(:first-of-type) {
+  display: none
+}
+
+#msform input,
+#msform textarea {
+  padding: 8px 15px 8px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  margin-top: 2px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: var(--tipo-principal);
+  color: #2C3E50;
+  font-size: 16px;
+  letter-spacing: 1px
+}
+
+#msform input:focus,
+#msform textarea:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid #004a81;
+  outline-width: 0
+}
+
+#msform .action-button {
+  width: 100px;
+  background: var(--lila);
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 0px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 0px 10px 5px;
+  float: right
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+  background-color: #311B92
+}
+
+#msform .action-button-previous {
+  width: 100px;
+  background: #616161;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 0px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px 10px 0px;
+  float: right
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+  background-color: #004a81;
+}
+
+.card {
+  z-index: 0;
+  border: none;
+  position: relative;
+  border: none !important;
+}
+
+.fs-title {
+  font-size: 25px;
+  color: var(--lila);
+  margin-bottom: 15px;
+  font-weight: normal;
+  text-align: left
+}
+
+.purple-text {
+  color: var(--lila);
+  font-weight: normal
+}
+
+.steps {
+  font-size: 25px;
+  color: gray;
+  margin-bottom: 10px;
+  font-weight: normal;
+  text-align: right
+}
+
+.fieldlabels {
+  color: gray;
+  text-align: left
+}
+
+#progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  color: lightgrey
+}
+
+#progressbar .active {
+  color: var(--lila)
+}
+
+#progressbar li {
+  list-style-type: none;
+  font-size: 15px;
+  width: 18%;
+  float:left;
+  position: relative;
+  font-weight: 400
+}
+
+#progressbar #account:before {
+  font-family: FontAwesome;
+  content: "\f13e"
+}
+
+#progressbar #personal:before {
+  font-family: FontAwesome;
+  content: "\f007"
+}
+
+#progressbar #payment:before {
+  font-family: FontAwesome;
+  content: "\f030"
+}
+
+#progressbar #confirm:before {
+  font-family: FontAwesome;
+  content: "\f00c"
+}
+
+#progressbar li:before {
+  width: 50px;
+  height: 50px;
+  line-height: 45px;
+  display: block;
+  font-size: 20px;
+  color: #ffffff;
+  background: lightgray;
+  border-radius: 50%;
+  margin: 0 auto 10px auto;
+  padding: 2px
+}
+
+#progressbar li:after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: lightgray;
+  position: absolute;
+  left: 0;
+  top: 25px;
+  z-index: -1
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+  background: var(--rosado);
+}
+
+.progress {
+  height: 20px
+}
+
+.progress-bar {
+  background-color: #673AB7
+}
+
+.fit-image {
+  width: 100%;
+  object-fit: cover
+}
+
+.progress-bar {
+  background-color: #004a81 !important;
+}
+
+/*****/
+.title{
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 6px 0;
+  color: #333;
+}
+
+
+
+@media (max-width: 700px) {
+  #progressbar li {
+    list-style-type: none;
+    font-size: 15px;
+    width: 14%;
+    float: left;
+    position: relative;
+    font-weight: 400;
+    flex-wrap: wrap;
+    display: contents;
+  }
+  }
